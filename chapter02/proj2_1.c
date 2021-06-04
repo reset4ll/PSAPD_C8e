@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-#define rate 1,50
+#define rate 1.50
 
 int main()
 {
@@ -18,14 +18,14 @@ int main()
     scanf("%f", &odom_end);
 
     /* Calcula la trayectoria realizada */
-    fare = odom_init - odom_end;
+    fare = odom_end - odom_init;
     
     /* Calcula el coste del viaje */
     cost = fare * rate;
 
     /* Muestra los resultados */
-    printf("Ha recorrido una distancia de %f miles.\n", fare);
-    printf("A $1,50 por milla, el precio es de: %f\n", cost);
+    printf("Ha recorrido una distancia de %.1f millas.\n", fare);
+    printf("A $1,50 por milla, el precio es de: $%.2f \n", cost);
 
     return 0;
 
